@@ -1,322 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Quiz App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1><i class="fas fa-code-branch"></i> DevOps Quiz Master</h1>
-                <p class="subtitle">Test your DevOps knowledge with this interactive quiz!</p>
-            </div>
-            <div class="header-info">
-                <div class="info-item">
-                    <i class="fas fa-question-circle"></i>
-                    <span>24 Questions</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-tags"></i>
-                    <span>5 Topics</span>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <span>60s per Question</span>
-                </div>
-            </div>
-        </header>
-       
-        <main>
-            <!-- Welcome Screen -->
-            <section id="welcome-section">
-                <div class="welcome-card">
-                    <div class="welcome-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h2>Welcome to DevOps Quiz!</h2>
-                    <p class="welcome-text">
-                        Test your knowledge of DevOps principles, tools, and practices.
-                        Each question has a 60-second timer. Use keyboard shortcuts for faster navigation!
-                    </p>
-                    <div class="keyboard-shortcuts">
-                        <h3><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h3>
-                        <div class="shortcuts-grid">
-                            <div class="shortcut-item">
-                                <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd>
-                                <span>Select answer</span>
-                            </div>
-                            <div class="shortcut-item">
-                                <kbd>Enter</kbd>
-                                <span>Submit/Next</span>
-                            </div>
-                            <div class="shortcut-item">
-                                <kbd>H</kbd>
-                                <span>Show hint</span>
-                            </div>
-                            <div class="shortcut-item">
-                                <kbd>←</kbd><kbd>→</kbd>
-                                <span>Navigate questions</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="start-quiz-btn" class="btn primary start-btn">
-                        <i class="fas fa-play"></i> Start Quiz
-                    </button>
-                </div>
-            </section>
-           
-            <!-- Topic Selection (Initially hidden) -->
-            <section id="topic-selection" class="hidden">
-                <div class="section-header">
-                    <h2><i class="fas fa-folder-open"></i> Select a DevOps Topic</h2>
-                    <p class="section-subtitle">Choose a topic to begin your quiz journey</p>
-                </div>
-               
-                <div class="topics-container">
-                    <!-- Topics loaded dynamically -->
-                </div>
-               
-                <div class="topic-stats">
-                    <div class="stat-card">
-                        <i class="fas fa-question"></i>
-                        <div>
-                            <h3>24</h3>
-                            <p>Total Questions</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>60s</h3>
-                            <p>Per Question</p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-trophy"></i>
-                        <div>
-                            <h3>80%</h3>
-                            <p>Passing Score</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <button id="back-to-welcome" class="btn secondary">
-                    <i class="fas fa-arrow-left"></i> Back to Welcome
-                </button>
-            </section>
-           
-            <!-- Quiz Section -->
-            <section id="quiz-section" class="hidden">
-                <div class="quiz-header">
-                    <div class="quiz-progress">
-                        <div class="progress-info">
-                            <span>Question <span id="current-question">1</span> of <span id="total-questions">24</span></span>
-                            <span class="score-display">Score: <span id="score-value">0</span></span>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar" id="quiz-progress-bar"></div>
-                        </div>
-                    </div>
-                   
-                    <div class="quiz-timer">
-                        <div class="timer-circle">
-                            <svg width="60" height="60">
-                                <circle cx="30" cy="30" r="28" class="timer-bg"></circle>
-                                <circle cx="30" cy="30" r="28" class="timer-progress"></circle>
-                            </svg>
-                            <span id="timer-value">60</span>
-                        </div>
-                        <div class="timer-label">Seconds Remaining</div>
-                    </div>
-                </div>
-               
-                <div class="quiz-content">
-                    <div class="question-header">
-                        <span class="topic-badge" id="question-topic">Continuous Integration</span>
-                        <div class="question-meta">
-                            <span class="difficulty">Medium</span>
-                            <span class="points">10 points</span>
-                        </div>
-                    </div>
-                   
-                    <div class="question-body">
-                        <h2 id="question-text">What is the primary goal of Continuous Integration?</h2>
-                       
-                        <div class="options-container">
-                            <!-- Options loaded dynamically -->
-                        </div>
-                       
-                        <div class="quiz-actions">
-                            <button id="prev-btn" class="btn secondary">
-                                <i class="fas fa-arrow-left"></i> Previous
-                            </button>
-                           
-                            <div class="center-actions">
-                                <button id="hint-btn" class="btn secondary hint-btn">
-                                    <i class="fas fa-lightbulb"></i> Hint
-                                </button>
-                                <button id="flag-btn" class="btn secondary">
-                                    <i class="far fa-flag"></i> Flag
-                                </button>
-                            </div>
-                           
-                            <button id="submit-btn" class="btn primary submit-btn">
-                                <i class="fas fa-paper-plane"></i> Submit Answer
-                            </button>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Feedback Modal -->
-                <div id="feedback-modal" class="modal hidden">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 id="feedback-title"></h3>
-                            <button class="close-modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="feedback-icon" id="feedback-icon"></div>
-                            <p id="feedback-text"></p>
-                            <div id="correct-answer" class="correct-answer-box"></div>
-                            <div class="feedback-stats">
-                                <div class="stat">
-                                    <i class="fas fa-clock"></i>
-                                    <span>Time taken: <span id="time-taken-feedback">0</span>s</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>Accuracy: <span id="accuracy-feedback">0</span>%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button id="continue-btn" class="btn primary">
-                                <i class="fas fa-arrow-right"></i> Continue
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-           
-            <!-- Results Section -->
-            <section id="results-section" class="hidden">
-                <div class="results-container">
-                    <div class="results-header">
-                        <div class="trophy-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h2>Quiz Completed!</h2>
-                        <p class="results-subtitle">Here's how you performed</p>
-                    </div>
-                   
-                    <div class="results-content">
-                        <div class="score-display-large">
-                            <div class="score-circle-large">
-                                <div class="score-inner">
-                                    <span id="final-score">0</span>
-                                    <small>%</small>
-                                </div>
-                                <div class="score-label">Your Score</div>
-                            </div>
-                           
-                            <div class="score-message">
-                                <h3 id="score-message">Keep Practicing!</h3>
-                                <p id="score-description">DevOps is a continuous journey of learning</p>
-                            </div>
-                        </div>
-                       
-                        <div class="results-stats">
-                            <div class="stat-box correct">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <h4 id="correct-count">0</h4>
-                                    <p>Correct Answers</p>
-                                </div>
-                            </div>
-                            <div class="stat-box total">
-                                <i class="fas fa-question-circle"></i>
-                                <div>
-                                    <h4 id="total-answered">0</h4>
-                                    <p>Total Questions</p>
-                                </div>
-                            </div>
-                            <div class="stat-box time">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h4 id="time-taken">0</h4>
-                                    <p>Seconds Used</p>
-                                </div>
-                            </div>
-                            <div class="stat-box accuracy">
-                                <i class="fas fa-chart-line"></i>
-                                <div>
-                                    <h4 id="accuracy">0</h4>
-                                    <p>Accuracy %</p>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="performance-chart">
-                            <h3><i class="fas fa-chart-bar"></i> Performance Breakdown</h3>
-                            <div class="chart-container">
-                                <canvas id="performanceChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="results-actions">
-                        <button id="restart-btn" class="btn primary">
-                            <i class="fas fa-redo"></i> Restart Quiz
-                        </button>
-                        <button id="change-topic-btn" class="btn secondary">
-                            <i class="fas fa-exchange-alt"></i> Change Topic
-                        </button>
-                        <button id="review-btn" class="btn secondary">
-                            <i class="fas fa-list"></i> Review Answers
-                        </button>
-                    </div>
-                </div>
-            </section>
-        </main>
-       
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><i class="fas fa-code-branch"></i> DevOps Quiz App</h3>
-                    <p>A collaborative project for Distributed Version Control Assignment</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Features</h4>
-                    <ul>
-                        <li>24 DevOps Questions</li>
-                        <li>5 Topic Categories</li>
-                        <li>Interactive Quiz Interface</li>
-                        <li>Detailed Analytics</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Developed By</h4>
-                    <p>Student A: Question Bank Owner</p>
-                    <p>Student B: UI & Logic Owner</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DevOps Quiz App | Distributed Version Control Assignment</p>
-                <div class="footer-links">
-                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#"><i class="fas fa-question-circle"></i> Help</a>
-                    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
-                </div>
-            </div>
-        </footer>
-    </div>
-   
-    <!-- Include Chart.js for performance chart -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="app.js"></script>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-code-branch"></i> DevOps Quiz Master</h1>
+      <p class="subtitle">Test your DevOps knowledge with this interactive quiz!</p>
+    </header>
+
+    <main>
+      <!-- Welcome Screen -->
+      <section id="welcome-section">
+        <h2>Welcome to DevOps Quiz!</h2>
+        <p>Choose a topic and start testing your knowledge.</p>
+        <button id="start-quiz-btn" class="btn primary"><i class="fas fa-play"></i> Start Quiz</button>
+      </section>
+
+      <!-- Topic Selection -->
+      <section id="topic-selection" class="hidden">
+        <h2><i class="fas fa-folder-open"></i> Select a DevOps Topic</h2>
+        <div class="topics-container"></div>
+        <button id="back-to-welcome" class="btn secondary"><i class="fas fa-arrow-left"></i> Back</button>
+      </section>
+
+      <!-- Quiz Section -->
+      <section id="quiz-section" class="hidden">
+        <div class="quiz-header">
+          <span>Question <span id="current-question">0</span> of <span id="total-questions">0</span></span>
+          <span>Score: <span id="score-value">0</span></span>
+        </div>
+
+        <div class="quiz-content">
+          <span id="question-topic" class="topic-badge"></span>
+          <h2 id="question-text"></h2>
+          <div class="options-container"></div>
+
+          <div class="quiz-actions">
+            <button id="prev-btn" class="btn secondary"><i class="fas fa-arrow-left"></i> Previous</button>
+            <button id="submit-btn" class="btn primary"><i class="fas fa-paper-plane"></i> Submit</button>
+            <button id="continue-btn" class="btn primary" style="display:none;"><i class="fas fa-arrow-right"></i> Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Section -->
+      <section id="results-section" class="hidden">
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: <span id="final-score">0</span>%</p>
+        <p>Correct Answers: <span id="correct-count">0</span> / <span id="total-answered">0</span></p>
+        <p>Accuracy: <span id="accuracy">0</span>%</p>
+        <canvas id="performanceChart"></canvas>
+        <div class="results-actions">
+          <button id="restart-btn" class="btn primary"><i class="fas fa-redo"></i> Restart</button>
+          <button id="change-topic-btn" class="btn secondary"><i class="fas fa-exchange-alt"></i> Change Topic</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 DevOps Quiz App | Distributed Version Control Assignment</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
