@@ -11,5 +11,57 @@
       ],
       "answerIndex": 1,
       "explanation": "Continuous Integration aims to detect integration issues early by frequently merging code changes into a shared repository."
+    },
+    {
+      "id": "Q2",
+      "topic": "Continuous Integration",
+      "question": "Which of these is NOT a benefit of Continuous Integration?",
+      "options": [
+        "Early bug detection",
+        "Reduced integration problems",
+        "Elimination of all manual testing",
+        "Faster release cycles"
+      ],
+      "answerIndex": 2,
+      "explanation": "CI doesn't eliminate manual testing but makes it more efficient by catching issues early through automated testing."
+    },
+    {
+      "id": "Q3",
+      "topic": "Continuous Integration",
+      "question": "What should trigger a CI pipeline?",
+      "options": [
+        "Only manual triggers by team leads",
+        "Code commit to the main branch only",
+        "Any commit to any branch in the repository",
+        "Only during business hours"
+      ],
+      "answerIndex": 2,
+      "explanation": "CI pipelines should typically run on any commit to catch issues early, regardless of the branch."
+    },
+    {
+      "id": "Q4",
+      "topic": "Continuous Delivery",
+      "question": "What distinguishes Continuous Delivery from Continuous Deployment?",
+      "options": [
+        "CD uses containers while CI doesn't",
+        "Continuous Delivery requires manual approval for production, Continuous Deployment is automatic",
+        "Continuous Delivery is faster than Continuous Deployment",
+        "There is no difference"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuous Delivery requires manual approval for production releases, while Continuous Deployment is fully automated."
+    },
+    {
+      "id": "Q5",
+      "topic": "Continuous Delivery",
+      "question": "Which practice ensures software can be released reliably at any time?",
+      "options": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Test-Driven Development",
+        "Infrastructure as Code"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuous Delivery ensures software is always in a releasable state through automation and rigorous testing."
     }
   ]
