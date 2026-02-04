@@ -69,3 +69,39 @@ A static web application for testing DevOps knowledge, built as part of a Distri
 }
 ```
 ### Added UI features tu the quiz ui
+## UI Features
+
+### Enhanced User Interface:
+- **Welcome Screen** with keyboard shortcuts guide
+- **Visual Topic Cards** with icons and question counts
+- **Interactive Quiz Interface** with:
+  - Circular timer with visual countdown
+  - Progress bar showing completion percentage
+  - Topic badges and difficulty indicators
+  - Flag questions for review
+  - Hint system for challenging questions
+- **Feedback Modal** with detailed explanations and statistics
+- **Results Dashboard** with:
+  - Visual score display
+  - Performance statistics
+  - Topic-wise accuracy chart
+  - Multiple action buttons
+
+### Keyboard Shortcuts:
+- **1, 2, 3, 4**: Select answer options
+- **Enter**: Submit answer / Continue to next question
+- **Arrow Keys**: Navigate between questions
+- **H**: Show hint for current question
+- **F**: Flag/unflag question for review
+
+### Responsive Design:
+- Fully responsive layout for all screen sizes
+- Mobile-optimized touch controls
+- Adaptive font sizes and spacing
+- Collapsible navigation on small screens
+
+### Accessibility Features:
+- Keyboard navigation support
+- Clear visual feedback
+- Color contrast compliance
+- Screen reader friendly labels
