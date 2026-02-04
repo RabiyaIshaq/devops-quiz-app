@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DevOps Knowledge Quiz</h1>
+            <p class="subtitle">Test your DevOps knowledge with this interactive quiz!</p>
+        </header>
+        
+        <main>
+            <section id="topic-selection">
+                <h2>Select a DevOps Topic</h2>
+                <div class="topics-container">
+                    <!-- Topics will be loaded dynamically -->
+                </div>
+                <div class="timer">Time: 60s</div>
+            </section>
+            
+            <section id="quiz-section" class="hidden">
+                <div class="quiz-header">
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="stats">
+                        <span class="question-count">Question: <span id="current-question">1</span>/<span id="total-questions">0</span></span>
+                        <span class="score">Score: <span id="score-value">0</span></span>
+                        <span class="timer">Time: <span id="timer-value">60</span>s</span>
+                    </div>
+                </div>
+                
+                <div class="question-container">
+                    <h3 id="question-topic"></h3>
+                    <h2 id="question-text"></h2>
+                    
+                    <div class="options-container">
+                        <!-- Options will be loaded dynamically -->
+                    </div>
+                    
+                    <div class="navigation">
+                        <button id="prev-btn" class="btn secondary">Previous</button>
+                        <button id="submit-btn" class="btn primary">Submit Answer</button>
+                        <button id="next-btn" class="btn primary">Next Question</button>
+                    </div>
+                    
+                    <div class="quiz-controls">
+                        <button id="hint-btn" class="btn secondary">Show Hint</button>
+                        <button id="review-btn" class="btn secondary">Review Later</button>
+                    </div>
+                </div>
+                
+                <div id="feedback" class="hidden">
+                    <h3 id="feedback-title"></h3>
+                    <p id="feedback-text"></p>
+                    <div id="correct-answer" class="hidden"></div>
+                    <button id="continue-btn" class="btn primary">Continue</button>
+                </div>
+            </section>
+            
+            <section id="results-section" class="hidden">
+                <h2>Quiz Complete!</h2>
+                <div class="results-container">
+                    <div class="result-card">
+                        <h3>Your Score</h3>
+                        <div class="score-circle">
+                            <span id="final-score">0</span>%
+                        </div>
+                        <p id="score-message"></p>
+                    </div>
+                    <div class="result-details">
+                        <p>Correct Answers: <span id="correct-count">0</span></p>
+                        <p>Total Questions: <span id="total-answered">0</span></p>
+                        <p>Accuracy: <span id="accuracy">0</span>%</p>
+                        <p>Time Taken: <span id="time-taken">0</span>s</p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="restart-btn" class="btn primary">Restart Quiz</button>
+                    <button id="change-topic-btn" class="btn secondary">Change Topic</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>DevOps Quiz App | Distributed Version Control Assignment</p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
