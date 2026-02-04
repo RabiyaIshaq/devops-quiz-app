@@ -65,3 +65,4 @@ A static web application for testing DevOps knowledge, built as part of a Distri
   "answerIndex": 1,
   "explanation": "Continuous Integration aims to detect integration issues early..."
 }
+# Add ui features to readme.
