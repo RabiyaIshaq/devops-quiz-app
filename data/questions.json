@@ -11,5 +11,307 @@
       ],
       "answerIndex": 1,
       "explanation": "Continuous Integration aims to detect integration issues early by frequently merging code changes into a shared repository."
-    }
+    },
+    {
+      "id": "Q2",
+      "topic": "Continuous Integration",
+      "question": "Which of these is NOT a benefit of Continuous Integration?",
+      "options": [
+        "Early bug detection",
+        "Reduced integration problems",
+        "Elimination of all manual testing",
+        "Faster release cycles"
+      ],
+      "answerIndex": 2,
+      "explanation": "CI doesn't eliminate manual testing but makes it more efficient by catching issues early through automated testing."
+    },
+    {
+      "id": "Q3",
+      "topic": "Continuous Integration",
+      "question": "What should trigger a CI pipeline?",
+      "options": [
+        "Only manual triggers by team leads",
+        "Code commit to the main branch only",
+        "Any commit to any branch in the repository",
+        "Only during business hours"
+      ],
+      "answerIndex": 2,
+      "explanation": "CI pipelines should typically run on any commit to catch issues early, regardless of the branch."
+    },
+    {
+      "id": "Q4",
+      "topic": "Continuous Delivery",
+      "question": "What distinguishes Continuous Delivery from Continuous Deployment?",
+      "options": [
+        "CD uses containers while CI doesn't",
+        "Continuous Delivery requires manual approval for production, Continuous Deployment is automatic",
+        "Continuous Delivery is faster than Continuous Deployment",
+        "There is no difference"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuous Delivery requires manual approval for production releases, while Continuous Deployment is fully automated."
+    },
+    {
+      "id": "Q5",
+      "topic": "Continuous Delivery",
+      "question": "Which practice ensures software can be released reliably at any time?",
+      "options": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Test-Driven Development",
+        "Infrastructure as Code"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuous Delivery ensures software is always in a releasable state through automation and rigorous testing."
+    },
+
+    {
+        "id": "Q6",
+        "topic": "Infrastructure as Code",
+        "question": "What is the main advantage of Infrastructure as Code?",
+        "options": [
+        "Makes infrastructure cheaper",
+        "Allows infrastructure to be version controlled and automated",
+        "Eliminates the need for sysadmins",
+        "Only works with cloud providers"
+        ],
+        "answerIndex": 1,
+        "explanation": "IaC allows infrastructure to be managed like software code, enabling version control, automation, and consistency."
+    },
+    {
+        "id": "Q7",
+        "topic": "Infrastructure as Code",
+        "question": "Which tool is commonly used for Infrastructure as Code?",
+        "options": [
+        "Jenkins",
+        "Splunk",
+        "Terraform",
+        "Nagios"
+        ],
+        "answerIndex": 2,
+        "explanation": "Terraform is a popular Infrastructure as Code tool that uses declarative configuration files to manage cloud resources."
+    },
+    {
+        "id": "Q8",
+        "topic": "Infrastructure as Code",
+        "question": "What is idempotency in the context of IaC?",
+        "options": [
+        "Infrastructure costs remain the same",
+        "Applying the same configuration multiple times produces the same result",
+        "Code can only be run once",
+        "Infrastructure never changes"
+        ],
+        "answerIndex": 1,
+        "explanation": "Idempotency means applying the same configuration repeatedly results in the same infrastructure state, preventing inconsistencies."
+    },
+    {
+        "id": "Q9",
+        "topic": "Version Control Systems",
+        "question": "What is a key feature of distributed version control systems like Git?",
+        "options": [
+        "Centralized repository only",
+        "No branching capability",
+        "Every developer has a complete copy of the repository",
+        "Only works offline"
+        ],
+        "answerIndex": 2,
+        "explanation": "In distributed VCS, every developer has a full copy of the repository including its history, enabling offline work and faster operations."
+    },
+    {
+        "id": "Q10",
+        "topic": "Version Control Systems",
+        "question": "What command creates a new branch in Git?",
+        "options": [
+        "git create branch",
+        "git new branch",
+        "git branch <name>",
+        "git checkout -b <name>"
+        ],
+        "answerIndex": 3,
+        "explanation": "git checkout -b <name> creates and switches to a new branch in one command. git branch <name> only creates it."
+    },
+    {
+        "id": "Q11",
+        "topic": "Continuous Integration",
+        "question": "What is a CI/CD pipeline?",
+        "options": [
+          "A physical pipeline for software delivery",
+          "A series of automated steps to build, test, and deploy code",
+          "A network protocol for continuous delivery",
+          "A manual checklist for releases"
+        ],
+        "answerIndex": 1,
+        "explanation": "A CI/CD pipeline automates the software delivery process from code commit to production deployment through sequential stages."
+      },
+      {
+        "id": "Q12",
+        "topic": "Continuous Integration",
+        "question": "Which of these is a popular CI server?",
+        "options": [
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "Ansible"
+        ],
+        "answerIndex": 2,
+        "explanation": "Jenkins is an open-source automation server that supports building, deploying, and automating software projects."
+      },
+      {
+        "id": "Q13",
+        "topic": "Continuous Delivery",
+        "question": "What is a deployment pipeline?",
+        "options": [
+          "A physical pipeline for deploying hardware",
+          "A manual checklist for releases",
+          "An automated process for building, testing, and deploying software",
+          "A network protocol for deployments"
+        ],
+        "answerIndex": 2,
+        "explanation": "A deployment pipeline automates the process from code commit to production deployment, ensuring software quality at each stage."
+      },
+      {
+        "id": "Q14",
+        "topic": "Continuous Delivery",
+        "question": "What is blue-green deployment?",
+        "options": [
+          "Using blue and green servers for different environments",
+          "A deployment strategy with two identical production environments",
+          "Deploying only during day and night",
+          "A color-coding system for code review"
+        ],
+        "answerIndex": 1,
+        "explanation": "Blue-green deployment maintains two identical production environments (blue and green) to enable zero-downtime deployments and quick rollbacks."
+      },
+      {
+        "id": "Q15",
+        "topic": "Continuous Delivery",
+        "question": "What is canary deployment?",
+        "options": [
+          "Deploying to miners first",
+          "Releasing new version to a small subset of users first",
+          "Deploying only to production",
+          "Using canary birds to test deployments"
+        ],
+        "answerIndex": 1,
+        "explanation": "Canary deployment releases changes to a small percentage of users first to monitor performance before full rollout."
+      },
+      {
+        "id": "Q16",
+        "topic": "Infrastructure as Code",
+        "question": "What does 'immutable infrastructure' mean?",
+        "options": [
+          "Infrastructure that never changes",
+          "Replacing servers rather than updating them",
+          "Infrastructure that cannot be deleted",
+          "Using only physical servers"
+        ],
+        "answerIndex": 1,
+        "explanation": "Immutable infrastructure involves replacing entire servers with new ones rather than making incremental changes to existing ones."
+      },
+      {
+        "id": "Q17",
+        "topic": "Infrastructure as Code",
+        "question": "Which IaC tool uses a declarative language?",
+        "options": [
+          "Ansible",
+          "Chef",
+          "Puppet",
+          "All of the above"
+        ],
+        "answerIndex": 3,
+        "explanation": "Ansible, Chef, and Puppet all use declarative approaches where you specify the desired state rather than the steps to get there."
+      },
+      {
+        "id": "Q18",
+        "topic": "Infrastructure as Code",
+        "question": "What is the main benefit of using version control with IaC?",
+        "options": [
+          "Makes infrastructure free",
+          "Provides audit trail and rollback capability",
+          "Automatically scales infrastructure",
+          "Reduces cloud costs by 50%"
+        ],
+        "answerIndex": 1,
+        "explanation": "Version control provides history, audit trails, collaboration, and the ability to rollback to previous infrastructure states."
+      },
+      {
+        "id": "Q19",
+        "topic": "Version Control Systems",
+        "question": "What is Git rebase used for?",
+        "options": [
+          "To delete branches",
+          "To combine multiple commits into one",
+          "To move or combine a sequence of commits to a new base commit",
+          "To revert changes"
+        ],
+        "answerIndex": 2,
+        "explanation": "Git rebase rewrites commit history by moving a branch to a new base commit, creating a linear history."
+      },
+      {
+        "id": "Q20",
+        "topic": "Version Control Systems",
+        "question": "What does 'git merge --no-ff' do?",
+        "options": [
+          "Creates a fast-forward merge",
+          "Creates a merge commit even if fast-forward is possible",
+          "Aborts the merge",
+          "Merges without commit"
+        ],
+        "answerIndex": 1,
+        "explanation": "--no-ff creates a merge commit even when a fast-forward merge is possible, preserving branch history."
+      },
+      {
+        "id": "Q21",
+        "topic": "DevOps Culture",
+        "question": "What is the main cultural shift in DevOps?",
+        "options": [
+          "Replacing operations with developers",
+          "Breaking down silos between development and operations",
+          "Eliminating testing teams",
+          "Making developers work overnight"
+        ],
+        "answerIndex": 1,
+        "explanation": "DevOps emphasizes collaboration and shared responsibility between development and operations teams."
+      },
+      {
+        "id": "Q22",
+        "topic": "DevOps Culture",
+        "question": "What does 'shift-left' mean in DevOps?",
+        "options": [
+          "Moving testing to the left side of the screen",
+          "Starting testing and security earlier in the development cycle",
+          "Using left-aligned code",
+          "Reducing team size"
+        ],
+        "answerIndex": 1,
+        "explanation": "Shift-left means integrating testing, security, and operations concerns earlier in the software development lifecycle."
+      },
+      {
+        "id": "Q23",
+        "topic": "DevOps Culture",
+        "question": "What is blameless postmortem?",
+        "options": [
+          "A meeting where no one talks",
+          "Focusing on fixing processes rather than blaming individuals",
+          "A postmortem without documentation",
+          "Ignoring failures"
+        ],
+        "answerIndex": 1,
+        "explanation": "Blameless postmortems focus on understanding and improving processes rather than assigning individual blame for failures."
+      },
+      {
+        "id": "Q24",
+        "topic": "DevOps Culture",
+        "question": "What is the 'Three Ways' principle in DevOps?",
+        "options": [
+          "Plan, Build, Deploy",
+          "Systems Thinking, Amplify Feedback Loops, Culture of Experimentation",
+          "Code, Test, Deploy",
+          "Monitor, Alert, Fix"
+        ],
+        "answerIndex": 1,
+        "explanation": "The Three Ways are: 1) Systems Thinking, 2) Amplify Feedback Loops, 3) Culture of Continuous Experimentation and Learning."
+      }
   ]
+
+  
