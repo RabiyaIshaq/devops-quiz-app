@@ -16,7 +16,6 @@ class QuizApp {
         // Initialize the app
         this.init();
     }
-    
     async init() {
         // Load questions from JSON file
         await this.loadQuestions();
