@@ -63,5 +63,73 @@
       ],
       "answerIndex": 1,
       "explanation": "Continuous Delivery ensures software is always in a releasable state through automation and rigorous testing."
+    },
+
+    {
+        "id": "Q6",
+        "topic": "Infrastructure as Code",
+        "question": "What is the main advantage of Infrastructure as Code?",
+        "options": [
+        "Makes infrastructure cheaper",
+        "Allows infrastructure to be version controlled and automated",
+        "Eliminates the need for sysadmins",
+        "Only works with cloud providers"
+        ],
+        "answerIndex": 1,
+        "explanation": "IaC allows infrastructure to be managed like software code, enabling version control, automation, and consistency."
+    },
+    {
+        "id": "Q7",
+        "topic": "Infrastructure as Code",
+        "question": "Which tool is commonly used for Infrastructure as Code?",
+        "options": [
+        "Jenkins",
+        "Splunk",
+        "Terraform",
+        "Nagios"
+        ],
+        "answerIndex": 2,
+        "explanation": "Terraform is a popular Infrastructure as Code tool that uses declarative configuration files to manage cloud resources."
+    },
+    {
+        "id": "Q8",
+        "topic": "Infrastructure as Code",
+        "question": "What is idempotency in the context of IaC?",
+        "options": [
+        "Infrastructure costs remain the same",
+        "Applying the same configuration multiple times produces the same result",
+        "Code can only be run once",
+        "Infrastructure never changes"
+        ],
+        "answerIndex": 1,
+        "explanation": "Idempotency means applying the same configuration repeatedly results in the same infrastructure state, preventing inconsistencies."
+    },
+    {
+        "id": "Q9",
+        "topic": "Version Control Systems",
+        "question": "What is a key feature of distributed version control systems like Git?",
+        "options": [
+        "Centralized repository only",
+        "No branching capability",
+        "Every developer has a complete copy of the repository",
+        "Only works offline"
+        ],
+        "answerIndex": 2,
+        "explanation": "In distributed VCS, every developer has a full copy of the repository including its history, enabling offline work and faster operations."
+    },
+    {
+        "id": "Q10",
+        "topic": "Version Control Systems",
+        "question": "What command creates a new branch in Git?",
+        "options": [
+        "git create branch",
+        "git new branch",
+        "git branch <name>",
+        "git checkout -b <name>"
+        ],
+        "answerIndex": 3,
+        "explanation": "git checkout -b <name> creates and switches to a new branch in one command. git branch <name> only creates it."
     }
   ]
+
+  
